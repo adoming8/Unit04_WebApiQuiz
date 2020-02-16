@@ -1,30 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF 8">
-    <title>API Quiz - Best of Luck!</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Conding Quiz Challenge</title>
+
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!--Import CSS style sheet-->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--Import materialize.css-->
+
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="container">
-    <!-- <div id="start">Start Quiz</div> -->
-    <div id="quiz">
-        <h1>API Quiz</h1>
-        <hr style="margin-bottom: 20px;">
 
-        <p id="question"></p>
-        <p id="choices"></p>
-        <div id="test-div"></div>
-        <div class="buttons"> 
-        </div>
-
-        <hr style="margin-top: 50px;">
-        <footer>
-            <p id="progress">Questions x of y</p>
-        </footer>
+<body>  
+<!------------ Navbar -------------->
+<div class="navbar-fixed">
+  <nav class="z-depth-0 grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a id="logo" class="left large amber-text ">Coding Quiz Challenge</a>
+        <ul class="right">
+          <li class="home">
+            <a href="#quiz" class="blue-text" id="home"> Home </a>
+          </li>
+          <li class="home">
+            <a href="#" class="blue-text" id="highscorebtn"> HighScores </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="script.js"></script>
+  </nav>
 </div>
+<!------------ Quiz -------------->
+<div id="quiz" class="container">
+  <!------------ Tabs -------------->
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs" id="tabdiv">
+        <li class="tab col s12"><a href="" id="quizchallange">Coding Quiz </a></li>
+      </ul>
+    </div>
+  </div>
+  <!------------ Quizzes -------------->
+  <div id="quiz" class="row">
+    <div class="col s12">
+      <div class="s12">
+        <div id="start"><h3>Start Quiz!</h3></div>
+        <div class="card-panel" id="quizPanel">
+          <div id="quiztemplate">
+            <div id="question" class="center"></div>
+            <div id="choices"  class="right">
+              <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+              <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+              <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+          </div>
+          <!-- <div id="scoreContainer" style="display: none"></div> -->
+        </div>        
+        <div id="scoreContainer" style="display: none">
+        </div>
+        <div id="gameOverDiv" class="center" style="display: none"  >
+          <h2 style=" color: tomato; font-family: 'Lemonada', cursive">You reach the Finish Line, Congrats!!!</h2>
+          <form class="form-inline">
+              <div class="form-group">
+                  <label for="playerInitials" class="center">Enter Name:</label>
+                  <input type="text" class="center" id="playerInitials" placeholder="Your Name">
+              </div>
+              <button id="submitScore" type="submit" class="btn ">Submit</button>
+          </form>                    
+        </div>
+        <div id="highscoresDiv" >
+          <h1 class="center">Highscores</h1>
+          <ul id="highScoreList" class="center"></ul>
+          <form class="form-inline center">
+              <button id="startOver" type="submit" class="btn ">Start Over</button>
+              <button id="clearHighscores" type="submit" class="btn btn-primary mb-2">Clear Highscores</button>
+          </form>                        
+        </div>
+        <div id="gif" class="center">
+          <iframe src="https://giphy.com/embed/y1JYvLe9fFfpK" frameBorder="0"  ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- JS Scripts -->
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> </script> 
+
+  <script src="js/main.js"></script>   
 </body>
 
 </html>

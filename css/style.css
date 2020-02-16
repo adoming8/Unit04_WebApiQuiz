@@ -1,0 +1,204 @@
+.jumbotron {
+    text-align: center;
+  }
+  .page-footer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  #logo {
+    font-size: 38px;
+    font-family: 'Sriracha', cursive;
+
+  }
+
+  h4{
+    margin-top: 70px;
+  }
+
+  .quizImg{
+    height: 180px;
+    width: 650px;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  body{
+    margin:auto;
+    background-color: whitesmoke;
+  }
+
+  #quiz{
+    margin-top: 90px;
+  }
+
+  #quizNum {
+    text-transform: none;
+    font-size: 19px;
+  }
+
+  .tabs .tab a {
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.653);
+    /*Custom Text Color*/
+  }
+  
+  .tabs .tab a:hover {
+    color: tomato;
+    /*Custom Color On Hover*/
+  }
+  
+  .tabs .tab a:focus.active {
+    color:blanchedalmond;
+    /*Custom Text Color While Active*/
+    background-color:tomato;
+    /*Custom Background Color While Active*/
+  }
+  
+  .tabs .indicator {
+    background-color: powderblue;
+    /*Custom Color Of Indicator*/
+  }
+
+  #quiz1 {
+    margin-top: 30px;
+    /* border: solid red; */
+  }
+
+  #timer {
+    color: tomato;
+    margin-right: 20px;
+    font-size: large;
+  }
+
+  #highscores_btn{
+    margin-left: 10px;
+  }
+
+  @media (max-width: 580px) {
+    #logo {
+      font-size: 20px;
+        }
+    .quizImg{
+      height: 120px;
+      width: 350px;
+    }
+  }
+  
+
+  #start{
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width:120px;
+    height:150px;
+    border : 2px solid lightgrey;
+    text-align: center;
+    cursor: pointer;
+    left:10px;
+    color : lightgrey;
+    margin-left: auto;
+    margin-right: auto;
+}
+#start:hover{
+    border: 3px solid lightseagreen;
+    color : lightseagreen;
+}
+
+
+#question{
+    font-family: 'Sriracha', cursive;
+    padding-bottom: 50px;
+}
+
+#choices{
+  width : 480px;
+  right : 0;
+  padding-top: 500px ; 
+  padding : 10px 
+}
+.choice{
+  display: inline-block;
+  width : 135px;
+  text-align: center;
+  border : 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding : 5px;
+}
+
+.choice:hover{
+  border : 2px solid grey;
+  font-weight: bold;
+}
+
+#timer{
+  height : 100px;
+  width : 200px;
+  bottom : 0px;
+  text-align: center;
+}
+#counter{
+  font-size: 3em;
+  padding-right: 30px;
+  padding-bottom: 0;
+}
+#btimeGauge{
+  width : 150px;
+  height : 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin-left : 25px;
+}
+#timeGauge{
+  height : 10px;
+  border-radius: 10px;
+  background-color: mediumseagreen;
+  margin-top : -10px;
+  margin-left : 25px;
+}
+#progress{
+  width : 500px;
+  bottom : 0px;
+  right : 0px;
+  padding:5px;
+  text-align: right;
+}
+.prog{
+  width : 25px;
+  height : 25px;
+  border: 1px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left : 5px;
+  margin-right : 5px;
+}
+#scoreContainer{
+  margin : 20px auto;
+  background-color: transparent;
+  opacity: 0.8;
+  height: 200px;
+  width : 400px;
+  border-radius: 5px;
+  position: relative;
+  display: none;
+}
+#scoreContainer img{
+  position: absolute; 
+  top: 65px;
+  left: 180px;
+}
+#scoreContainer p{
+  position: absolute;
+  display: block;
+  width : 59px;
+  height :59px;
+  top: 105px;
+  left: 186px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
